@@ -37,7 +37,7 @@
         <View
             android:id="@+id/form"
             android:layout_width="match_parent"
-            android:layout_height="950dp"
+            android:layout_height="965dp"
             android:layout_marginBottom="20dp"
             android:layout_below="@id/image_form"
             android:layout_marginHorizontal="17dp"

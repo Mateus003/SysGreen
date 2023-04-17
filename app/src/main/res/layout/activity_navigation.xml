@@ -263,11 +263,39 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_below="@id/line_bottom"
+            android:fontFamily="@font/nunito"
             android:layout_marginTop="35dp"
-            android:layout_marginEnd="16dp"
+            android:text="Use seu desconto de "
             android:layout_marginBottom="35dp"
             android:textColor="@color/black"
-            android:textSize="13sp" />
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/discount_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_bottom"
+            android:layout_marginTop="35dp"
+            android:textSize="14sp"
+            android:textColor="#008000"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:layout_toEndOf="@id/text_discount"
+            android:text="19.5% "
+            />
+        <TextView
+            android:id="@+id/partnership_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_bottom"
+            android:layout_marginTop="35dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito"
+            android:layout_toEndOf="@id/discount_value"
+            android:text="em lojas parceiras"
+            />
 
         <HorizontalScrollView
             android:id="@+id/scroll_partnership_company"
@@ -352,7 +380,7 @@
 
                 <ImageView
                     android:id="@+id/terabyte_promotion"
-                    android:layout_width="320dp"
+                    android:layout_width="310dp"
                     android:layout_height="210dp"
                     android:layout_marginStart="10dp"
                     android:src="@drawable/terabyte"/>
@@ -364,9 +392,10 @@
                     android:src="@drawable/ibyte_promotion"/>
                 <ImageView
                     android:id="@+id/magalu_promotion"
-                    android:layout_width="270dp"
+                    android:layout_width="280dp"
                     android:layout_height="210dp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:src="@drawable/magalu_promotion"/>
 
 

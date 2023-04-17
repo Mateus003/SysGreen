@@ -34,10 +34,6 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
         text.paint.shader = shader
 
 
-        var idDiscount = binding.textDiscount
-        var textDiscount = "Use seu desconto de <span style='font-style: italic; color: #008000;'>18.0%</span> em nossas lojas parceiras";
-        idDiscount.text = Html.fromHtml(textDiscount);
-
         binding.containerRegisterIcon.setOnClickListener(this)
         binding.textRegister.setOnClickListener(this)
 
