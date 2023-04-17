@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/text_email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="18dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="230dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/background_edittext"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/text_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text_email"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="18dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/background_edittext"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/text_support"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/text_password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:text="Esqueceu sua senha?"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/text_support"
+        android:layout_marginHorizontal="18sp"
+        android:layout_marginBottom="17sp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_button_login"
+        android:text="Login"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/continue_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Ou continue com"
+        android:layout_marginBottom="5dp"
+        android:textSize="16sp"
+        android:layout_below="@id/button_login"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+    <LinearLayout
+        android:id="@id/container_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/continue_with"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/image_google"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@mipmap/ic_google_foreground" />
+
+        <ImageView
+            android:id="@+id/image_facebook"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@mipmap/ic_facebook_foreground" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container_icons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="Ainda não é cadastrado? Cadastre-se!"
+        android:layout_marginBottom="50dp"
+        />
+
+
+
+</RelativeLayout>
+
+</ScrollView>

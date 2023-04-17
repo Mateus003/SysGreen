@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/background_top"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#59EB59"/>
+        <ImageView
+            android:id="@+id/button_return"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"/>
+
+
+        <ImageView
+            android:id="@+id/image_form"
+            android:layout_width="match_parent"
+            android:layout_below="@id/background_top"
+            android:layout_marginTop="10dp"
+            android:layout_height="250dp"
+            android:src="@drawable/undraw_forms_re_pkrt__1_"
+            />
+
+
+        <View
+            android:id="@+id/form"
+            android:layout_width="match_parent"
+            android:layout_height="950dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/image_form"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/background_view_colect" />
+
+        <TextView
+            android:id="@+id/name_electronic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:layout_marginTop="45dp"
+            android:layout_alignTop="@+id/form"
+            android:text="Nome do produto eletrônico"/>
+
+        <EditText
+            android:id="@+id/edittext_name_electronic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/name_electronic"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/edittext_name_electronic"
+            android:text="Preço estimado do produto descatado"/>
+
+         <EditText
+            android:id="@+id/edittext_price"
+            android:layout_width="match_parent"
+             android:inputType="numberDecimal"
+             android:layout_height="50dp"
+             android:layout_below="@id/text_price"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+
+
+        <TextView
+            android:id="@+id/quantify_items"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:layout_below="@id/edittext_price"
+            android:layout_marginTop="15dp"
+            android:text="Quantidade de itens descartados"/>
+
+        <EditText
+            android:id="@+id/edittext_quantify_items"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="number"
+
+            android:layout_below="@id/quantify_items"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+
+        <TextView
+            android:id="@+id/cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:fontFamily="@font/nunito"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/edittext_quantify_items"
+            android:layout_marginTop="15dp"
+            android:text="Qual é o CEP desejado para busca?"/>
+
+        <EditText
+            android:id="@+id/edittext_cep"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:layout_height="50dp"
+            android:layout_below="@id/cep"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+
+        <TextView
+            android:id="@+id/number_house"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:layout_below="@id/edittext_cep"
+            android:layout_marginTop="15dp"
+            android:text="Número da casa"/>
+
+        <EditText
+            android:id="@+id/edittext_number_house"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="number"
+
+            android:layout_below="@id/number_house"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+        <TextView
+            android:id="@+id/date_collect"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:layout_below="@id/edittext_number_house"
+            android:layout_marginTop="15dp"
+            android:text="Melhor dia para buscarmos o eletrônico"/>
+
+        <EditText
+            android:id="@+id/edittext_date_collect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="date"
+            android:layout_marginTop="2.5dp"
+
+            android:layout_below="@id/date_collect"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+
+        <TextView
+            android:id="@+id/hours_collect"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="16sp"
+            android:layout_below="@id/edittext_date_collect"
+            android:layout_marginTop="15dp"
+            android:text="Melhor hora para buscarmos o eletrônico"/>
+
+        <EditText
+            android:id="@+id/edittext_hours_collect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="time"
+            android:layout_below="@id/hours_collect"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#008000"
+            />
+
+
+
+        <TextView
+            android:id="@+id/age_electronic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="17dp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="25dp"
+            android:text="Quantos anos tem o produto eletrônico?"
+            android:fontFamily="@font/nunito"
+            android:layout_below="@id/edittext_hours_collect"
+            />
+        <RadioGroup
+            android:id="@+id/options_ages"
+            android:layout_below="@id/age_electronic"
+            android:layout_marginHorizontal="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/option_smaller_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:text="Menos de 3 anos"/>
+
+            <RadioButton
+                android:id="@+id/option_three_and_five"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:layout_height="wrap_content"
+
+                android:text="Entre 3 e 5 anos"/>
+
+            <RadioButton
+                android:id="@+id/option_more_five"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:layout_height="wrap_content"
+                android:text="Mais de 5 anos"/>
+
+        </RadioGroup>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_register"
+            android:layout_width="190dp"
+            android:layout_marginTop="25dp"
+            android:layout_height="40dp"
+            android:text="Enviar para análise"
+            android:backgroundTint="#008000"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/white"
+            android:layout_below="@id/options_ages"
+            android:background="@drawable/background_button_electronic_button"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+    </RelativeLayout>
+</ScrollView>

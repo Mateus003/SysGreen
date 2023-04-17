@@ -1,0 +1,378 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <View
+            android:id="@+id/background_top"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#59EB59" />
+
+        <View
+            android:id="@+id/background_picture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_edittext"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/text_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Olá, usuário!"
+            android:layout_toEndOf="@id/background_picture"
+            />
+
+
+        <TextView
+            android:id="@+id/text_welcome_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/background_picture"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/white"
+            android:layout_below="@id/text_name_user"
+            android:textSize="15sp"
+            android:text="Bem vindo de volta:)"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="20dp"
+
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_person" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_support"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/image_notification"
+            />
+
+        <ImageView
+            android:id="@+id/image_notification"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_notification" />
+
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="R$ 100,00"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/nunito"
+            android:layout_alignTop="@id/background_balance"
+            android:translationZ="10dp" />
+
+
+        <View
+            android:id="@+id/background_balance"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="105dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="4dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/background_balance" />
+
+
+        <View
+            android:id="@+id/container_register_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/container_icons"
+            android:layout_below="@id/background_balance"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/image_register_electronic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/container_register_icon"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="45dp"
+            android:src="@drawable/ic_register_electronic" />
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="80dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/image_register_electronic"
+            android:text="Reciclar novo eletrônico"/>
+
+
+        <View
+            android:id="@+id/container_marketplace_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/container_icons"
+            android:layout_below="@id/background_balance"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/image_bank"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/background_balance"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/container_marketplace_icon"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_bank" />
+
+
+        <TextView
+            android:id="@+id/text_bank"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_register_electronic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Transferir dinheiro"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+
+        <!--historico reciclagem -->
+        <View
+            android:id="@+id/container_recycle_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/container_icons"
+            android:layout_below="@id/background_balance"
+            android:layout_marginTop="30dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/image_historic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/container_recycle_icon"
+            android:layout_marginEnd="42.5dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ic_historic" />
+
+
+        <TextView
+            android:id="@+id/text_historic"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_historic"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Histórico de reciclagem"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+
+        <View
+            android:id="@+id/line_top"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D3D3D3"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/text_register"/>
+
+
+        <ImageView
+            android:id="@+id/image_tip"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="40dp"
+            android:layout_below="@id/line_top"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_tip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_historic"
+            android:layout_marginBottom="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito"
+            android:layout_marginTop="60dp"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/image_tip"
+            android:text="Quando você recicla seus itens eletrônicos com a gente, além de ajudar o meio ambiente, você é recompensado por meio de dinheiro e descontos que podem ser utilizados em nossas lojas parceiras!"
+            />
+
+        <View
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D3D3D3"
+            android:layout_below="@id/image_tip"/>
+
+
+        <TextView
+            android:id="@+id/text_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/line_bottom"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="35dp"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_partnership_company"
+            android:layout_below="@id/text_discount"
+            android:layout_width="match_parent"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/kabum"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/kabum"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ibyte"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/ibyte"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/magalu"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/magalu"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pichau"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/pichau"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/terabyte"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/terabyte_company"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+
+        <TextView
+            android:id="@+id/text_promotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/scroll_partnership_company"
+            android:text="Ofertas das lojas parceiras"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito"
+            />
+
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_promotions"
+            android:layout_below="@id/text_promotion"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="-20dp"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/terabyte_promotion"
+                    android:layout_width="320dp"
+                    android:layout_height="210dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/terabyte"/>
+                <ImageView
+                    android:id="@+id/ibyte_promotion"
+                    android:layout_width="260dp"
+                    android:layout_height="210dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ibyte_promotion"/>
+                <ImageView
+                    android:id="@+id/magalu_promotion"
+                    android:layout_width="270dp"
+                    android:layout_height="210dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/magalu_promotion"/>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </RelativeLayout>
+</ScrollView>
