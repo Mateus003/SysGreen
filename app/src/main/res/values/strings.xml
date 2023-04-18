@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SysGreen</string>
+    <string name="title_activity_collect_point">CollectPointActivity</string>
 </resources>

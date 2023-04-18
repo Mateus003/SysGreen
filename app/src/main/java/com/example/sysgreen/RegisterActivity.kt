@@ -3,6 +3,7 @@ package com.example.sysgreen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.example.sysgreen.databinding.ActivityRegisterBinding
@@ -13,15 +14,29 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener{
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
-        binding.buttonReturn.setOnClickListener(this)
         binding.buttonRegister.setOnClickListener(this)
+
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.background_button_return) // ícone da seta branca
+            setTitle("")
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back) // ícone da seta branca
+        }
     }
 
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish() // finaliza a Activity atual
+                startActivity(Intent(this, NavigationActivity::class.java)) // inicia a NavigationActivity
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
     override fun onClick(v: View) {
-        if (v.id == R.id.button_return){
-            startActivity(Intent(this, NavigationActivity::class.java))
-        }else if(v.id == R.id.button_register){
+        if (v.id == R.id.button_register){
             verifyItemsForm()
         }
     }

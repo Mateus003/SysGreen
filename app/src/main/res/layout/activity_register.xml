@@ -10,24 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <View
-            android:id="@+id/background_top"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="#59EB59"/>
-        <ImageView
-            android:id="@+id/button_return"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_arrow_back"/>
 
 
         <ImageView
             android:id="@+id/image_form"
             android:layout_width="match_parent"
-            android:layout_below="@id/background_top"
             android:layout_marginTop="10dp"
             android:layout_height="250dp"
             android:src="@drawable/undraw_forms_re_pkrt__1_"
@@ -37,7 +24,7 @@
         <View
             android:id="@+id/form"
             android:layout_width="match_parent"
-            android:layout_height="965dp"
+            android:layout_height="975dp"
             android:layout_marginBottom="20dp"
             android:layout_below="@id/image_form"
             android:layout_marginHorizontal="17dp"
@@ -218,6 +205,7 @@
             />
         <RadioGroup
             android:id="@+id/options_ages"
+            android:layout_marginTop="7dp"
             android:layout_below="@id/age_electronic"
             android:layout_marginHorizontal="25dp"
             android:layout_width="match_parent"
@@ -225,6 +213,7 @@
 
             <RadioButton
                 android:id="@+id/option_smaller_three"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
@@ -235,12 +224,14 @@
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/nunito"
                 android:layout_height="wrap_content"
-
+                android:layout_marginTop="10dp"
                 android:text="Entre 3 e 5 anos"/>
 
             <RadioButton
                 android:id="@+id/option_more_five"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+
                 android:fontFamily="@font/nunito"
                 android:layout_height="wrap_content"
                 android:text="Mais de 5 anos"/>

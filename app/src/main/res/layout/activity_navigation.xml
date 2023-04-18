@@ -144,35 +144,83 @@
             android:text="Reciclar novo eletrônico"/>
 
 
+
+        <!--Pontos de coleta -->
+        <View
+            android:id="@+id/container_collect_point"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+
+            android:background="@drawable/container_icons"
+            android:layout_below="@id/background_balance"
+            android:layout_marginStart="30dp"
+            android:layout_toStartOf="@id/container_marketplace_icon"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageView
+            android:id="@+id/image_collect_point"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="42dp"
+            android:layout_alignTop="@id/container_register_icon"
+            android:layout_toStartOf="@id/container_marketplace_icon"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/baseline_map_24"
+            android:layout_gravity="center"
+            />
+
+
+        <TextView
+            android:id="@+id/text_collect"
+            android:layout_width="85dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/container_marketplace_icon"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:layout_below="@id/image_collect_point"
+            android:text="Pontos de coleta próximos"/>
+
+
+        <!-- Transferir dinheiro -->
         <View
             android:id="@+id/container_marketplace_icon"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:layout_marginEnd="27dp"
             android:background="@drawable/container_icons"
             android:layout_below="@id/background_balance"
-            android:layout_centerHorizontal="true"
+            android:layout_toStartOf="@id/container_recycle_icon"
             android:layout_marginTop="30dp"
+            android:layout_gravity="center"
             />
-
 
         <ImageView
             android:id="@+id/image_bank"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_below="@id/background_balance"
-            android:layout_centerHorizontal="true"
             android:layout_alignTop="@id/container_marketplace_icon"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/ic_bank" />
+            android:layout_gravity="center"
 
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toStartOf="@id/container_recycle_icon"
+            android:src="@drawable/ic_bank" />
 
         <TextView
             android:id="@+id/text_bank"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/image_register_electronic"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="22dp"
+            android:layout_toStartOf="@id/container_recycle_icon"
             android:text="Transferir dinheiro"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -282,7 +330,7 @@
             android:textStyle="bold"
             android:fontFamily="@font/nunito"
             android:layout_toEndOf="@id/text_discount"
-            android:text="19.5% "
+            android:text="19.0% "
             />
         <TextView
             android:id="@+id/partnership_company"

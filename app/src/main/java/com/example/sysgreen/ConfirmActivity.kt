@@ -7,6 +7,7 @@ import android.graphics.LinearGradient
 import android.graphics.Shader
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.RadioButton
@@ -18,12 +19,18 @@ class ConfirmActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityConfirmBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
-        //Bloquear a orientação horizontal
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeAsUpIndicator(R.drawable.background_button_return)
+            setTitle("")
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+        }
+
+            //Bloquear a orientação horizontal
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         binding.textConfirm.setOnClickListener(this)
-        binding.buttonReturn.setOnClickListener(this)
+        binding.backgroundConfirm.setOnClickListener(this)
 
         val money = binding.textResultMoney
         val shader = LinearGradient(
@@ -45,13 +52,22 @@ class ConfirmActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.button_return){
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }else if(v.id == R.id.text_confirm){
+        if (v.id == R.id.text_confirm || v.id == R.id.background_confirm){
             startActivity(Intent(this, AnalysisActivity::class.java))
             finish()
         }
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish() //finaliza a Activity atual
+                startActivity(Intent(this, RegisterActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun calcReward() {

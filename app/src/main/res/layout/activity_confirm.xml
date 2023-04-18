@@ -6,20 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ConfirmActivity">
 
-    <View
-        android:id="@+id/background_top"
-        android:layout_width="match_parent"
-        android:background="#59EB59"
-        android:layout_height="55dp"
-         />
 
-    <ImageView
-        android:id="@+id/button_return"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_arrow_back"
 />
     <TextView
         android:id="@+id/text_information"
@@ -30,7 +17,6 @@
         android:textColor="@color/black"
         android:fontFamily="@font/nunito"
         android:textSize="25sp"
-        android:layout_below="@id/background_top"
         android:layout_marginTop="100dp"/>
 
     <TextView
@@ -78,6 +64,7 @@
 
 
     <View
+        android:id="@+id/background_confirm"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@drawable/background_to_confirm_activity"

@@ -33,7 +33,7 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
 
         text.paint.shader = shader
 
-
+        binding.containerCollectPoint.setOnClickListener(this)
         binding.containerRegisterIcon.setOnClickListener(this)
         binding.textRegister.setOnClickListener(this)
 
@@ -79,6 +79,8 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
+        }else if(v.id == R.id.container_collect_point){
+            startActivity(Intent(this, CollectPointActivity::class.java))
         }
 
     }
