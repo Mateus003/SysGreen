@@ -108,161 +108,186 @@
             android:backgroundTint="@color/white"
             android:background="@drawable/background_balance" />
 
+<HorizontalScrollView
+    android:id="@+id/container_options"
+    android:layout_below="@id/background_balance"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_marginTop="15dp"
+    android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/container_register_icon"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@drawable/container_icons"
-            android:layout_below="@id/background_balance"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-
-            />
-
-        <ImageView
-            android:id="@+id/image_register_electronic"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignTop="@id/container_register_icon"
-            android:layout_marginTop="12dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="45dp"
-            android:src="@drawable/ic_register_electronic" />
-
-        <TextView
-            android:id="@+id/text_register"
-            android:layout_width="80dp"
-            android:textAlignment="center"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/black"
-            android:textSize="11sp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@id/image_register_electronic"
-            android:text="Reciclar novo eletrônico"/>
+            android:orientation="horizontal">
 
 
+            <LinearLayout
+                android:id="@+id/container_register"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <!--Pontos de coleta -->
-        <View
-            android:id="@+id/container_collect_point"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="30dp"
+                <LinearLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_rounded_linear_layout"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
 
-            android:background="@drawable/container_icons"
-            android:layout_below="@id/background_balance"
-            android:layout_marginStart="30dp"
-            android:layout_toStartOf="@id/container_marketplace_icon"
-            android:layout_marginTop="30dp"
-            />
+                    <ImageView
+                        android:id="@+id/image_register_electronic"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_register_electronic" />
 
-        <ImageView
-            android:id="@+id/image_collect_point"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="42dp"
-            android:layout_alignTop="@id/container_register_icon"
-            android:layout_toStartOf="@id/container_marketplace_icon"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/baseline_map_24"
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="95dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Registrar novo eletrônico"/>
+
+
+            </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_collect_point"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_rounded_linear_layout"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_collect_point"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_map_24" />
+
+            </LinearLayout>
+        <TextView
+            android:layout_width="95dp"
             android:layout_gravity="center"
-            />
-
-
-        <TextView
-            android:id="@+id/text_collect"
-            android:layout_width="85dp"
-            android:textAlignment="center"
-            android:layout_height="wrap_content"
-            android:layout_toStartOf="@id/container_marketplace_icon"
-            android:layout_marginEnd="17dp"
-            android:layout_marginTop="20dp"
             android:textColor="@color/black"
-            android:textSize="11sp"
-            android:layout_below="@id/image_collect_point"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+
+            android:textAlignment="center"
             android:text="Pontos de coleta próximos"/>
+    </LinearLayout>
 
 
-        <!-- Transferir dinheiro -->
-        <View
-            android:id="@+id/container_marketplace_icon"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="27dp"
-            android:background="@drawable/container_icons"
-            android:layout_below="@id/background_balance"
-            android:layout_toStartOf="@id/container_recycle_icon"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            />
 
-        <ImageView
-            android:id="@+id/image_bank"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_below="@id/background_balance"
-            android:layout_alignTop="@id/container_marketplace_icon"
-            android:layout_gravity="center"
 
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="40dp"
-            android:layout_toStartOf="@id/container_recycle_icon"
-            android:src="@drawable/ic_bank" />
 
+
+    <LinearLayout
+        android:id="@+id/container_marketplace"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_rounded_linear_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_bank"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bank" />
+            </LinearLayout>
         <TextView
-            android:id="@+id/text_bank"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/image_register_electronic"
+            android:layout_width="95dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="22dp"
-            android:layout_toStartOf="@id/container_recycle_icon"
-            android:text="Transferir dinheiro"
-            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="11sp" />
-
-
-        <!--historico reciclagem -->
-        <View
-            android:id="@+id/container_recycle_icon"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="30dp"
-            android:layout_alignParentEnd="true"
-            android:background="@drawable/container_icons"
-            android:layout_below="@id/background_balance"
-            android:layout_marginTop="30dp"
-            />
-
-
-        <ImageView
-            android:id="@+id/image_historic"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@id/container_recycle_icon"
-            android:layout_marginEnd="42.5dp"
-            android:layout_marginTop="13dp"
-            android:src="@drawable/ic_historic" />
-
-
-        <TextView
-            android:id="@+id/text_historic"
-            android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/image_historic"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="20dp"
-            android:text="Histórico de reciclagem"
+            android:textSize="13sp"
             android:textAlignment="center"
+            android:text="Transferir dinheiro"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_recycle"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_rounded_linear_layout"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_historic"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_historic" />
+
+
+            </LinearLayout>
+        <TextView
+            android:layout_width="95dp"
+            android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="11sp" />
+            android:textSize="13sp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Histórico de reciclagem"/>
+
+    </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+</HorizontalScrollView>
+
 
 
         <View
@@ -270,15 +295,15 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#D3D3D3"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/text_register"/>
+            android:layout_marginTop="22.5dp"
+            android:layout_below="@id/container_options"/>
 
 
         <ImageView
             android:id="@+id/image_tip"
             android:layout_width="130dp"
             android:layout_height="160dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="35dp"
             android:layout_below="@id/line_top"
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_tip" />
@@ -286,8 +311,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_historic"
-            android:layout_marginBottom="40dp"
+            android:layout_below="@+id/container_options"
+            android:layout_marginBottom="35dp"
             android:layout_marginHorizontal="10dp"
             android:textColor="@color/black"
             android:fontFamily="@font/nunito"

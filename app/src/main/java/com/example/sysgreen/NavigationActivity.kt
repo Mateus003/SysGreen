@@ -34,8 +34,7 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
         text.paint.shader = shader
 
         binding.containerCollectPoint.setOnClickListener(this)
-        binding.containerRegisterIcon.setOnClickListener(this)
-        binding.textRegister.setOnClickListener(this)
+        binding.containerRegister.setOnClickListener(this)
 
         binding.kabum.setOnClickListener(this)
         binding.ibyte.setOnClickListener(this)
@@ -49,9 +48,13 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.container_register_icon || v.id == R.id.text_register){
+        if (v.id == R.id.container_register){
             startActivity(Intent(this, RegisterActivity::class.java))
-        }else if(v.id == R.id.kabum){
+        }else if(v.id == R.id.container_collect_point){
+            startActivity(Intent(this, CollectPointActivity::class.java))
+        }
+
+        else if(v.id == R.id.kabum){
             val url = "https://www.kabum.com.br"
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
@@ -79,9 +82,6 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
-        }else if(v.id == R.id.container_collect_point){
-            startActivity(Intent(this, CollectPointActivity::class.java))
         }
-
     }
 }
