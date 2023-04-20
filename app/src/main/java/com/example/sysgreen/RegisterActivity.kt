@@ -1,15 +1,18 @@
 package com.example.sysgreen
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.example.sysgreen.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var binding: ActivityRegisterBinding
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
@@ -55,23 +58,23 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener{
 
         if (textName != "" && textPrice !="" && textPrice!= "0"&& quantifyItems != ""&&
                 quantifyItems!="0" && cep!="" && numberHouse!="" && dateCollect!="" && hours!="" &&
-            (smallerThree.isChecked || moreFive.isChecked || threeAndFive.isChecked)
-        ){
-            val intent = Intent(this, ConfirmActivity::class.java)
+            (smallerThree.isChecked || moreFive.isChecked || threeAndFive.isChecked)){
+            if (hours.toInt() in 7..18){
+                val intent = Intent(this, ConfirmActivity::class.java)
 
-            intent.putExtra("price", textPrice.toDouble())
-            intent.putExtra("quantify", quantifyItems.toInt())
-
-
-            intent.putExtra("smallerThree", smallerThree.isChecked)
-            intent.putExtra("threeAndFive", threeAndFive.isChecked)
-            intent.putExtra("moreFive", moreFive.isChecked)
+                intent.putExtra("price", textPrice.toDouble())
+                intent.putExtra("quantify", quantifyItems.toInt())
 
 
+                intent.putExtra("smallerThree", smallerThree.isChecked)
+                intent.putExtra("threeAndFive", threeAndFive.isChecked)
+                intent.putExtra("moreFive", moreFive.isChecked)
+                startActivity(intent)
+            }else{
+                Toast.makeText(this, "Fazemos coletas das 7 horas da manhã até às 18 horas.", Toast.LENGTH_LONG).
+                show()
+            }
 
-
-
-            startActivity(intent)
         }else{
             Toast.makeText(this, "Preencha os campos corretamente", Toast.LENGTH_SHORT).
             show()

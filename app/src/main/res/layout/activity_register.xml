@@ -15,8 +15,8 @@
         <ImageView
             android:id="@+id/image_form"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="250dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="150dp"
             android:src="@drawable/undraw_forms_re_pkrt__1_"
             />
 
@@ -28,7 +28,6 @@
             android:layout_marginBottom="20dp"
             android:layout_below="@id/image_form"
             android:layout_marginHorizontal="17dp"
-            android:layout_marginTop="4dp"
             android:background="@drawable/background_view_colect" />
 
         <TextView
@@ -159,9 +158,8 @@
             android:id="@+id/edittext_date_collect"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="date"
+            android:inputType="number"
             android:layout_marginTop="2.5dp"
-
             android:layout_below="@id/date_collect"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="#008000"
@@ -183,7 +181,7 @@
             android:id="@+id/edittext_hours_collect"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="time"
+            android:inputType="number"
             android:layout_below="@id/hours_collect"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="#008000"
@@ -243,7 +241,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_register"
             android:layout_width="190dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:layout_height="40dp"
             android:text="Enviar para análise"
             android:backgroundTint="#008000"

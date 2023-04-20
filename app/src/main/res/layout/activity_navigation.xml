@@ -125,14 +125,14 @@
             <LinearLayout
                 android:id="@+id/container_register"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
@@ -150,30 +150,29 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="95dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="13sp"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Agendar nova coleta"
                     android:textAlignment="center"
-                    android:text="Registrar novo eletrônico"/>
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
 
 
-    <LinearLayout
+            <LinearLayout
         android:id="@+id/container_collect_point"
         android:layout_width="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="6.5dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
             <LinearLayout
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_rounded_linear_layout"
@@ -189,11 +188,11 @@
 
             </LinearLayout>
         <TextView
-            android:layout_width="95dp"
+            android:layout_width="90dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
+            android:textSize="12sp"
 
             android:textAlignment="center"
             android:text="Pontos de coleta próximos"/>
@@ -207,17 +206,16 @@
     <LinearLayout
         android:id="@+id/container_marketplace"
         android:layout_width="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="6.5dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
                 android:layout_marginStart="10dp"
                 android:background="@drawable/background_rounded_linear_layout"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
 
@@ -232,11 +230,11 @@
                     android:src="@drawable/ic_bank" />
             </LinearLayout>
         <TextView
-            android:layout_width="95dp"
+            android:layout_width="85dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:textAlignment="center"
             android:text="Transferir dinheiro"/>
 
@@ -246,16 +244,16 @@
     <LinearLayout
         android:id="@+id/container_recycle"
         android:layout_width="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="6.5dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+
         android:orientation="vertical">
             <LinearLayout
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_rounded_linear_layout"
@@ -268,16 +266,15 @@
                     android:layout_height="40dp"
                     android:src="@drawable/ic_historic" />
 
-
             </LinearLayout>
         <TextView
-            android:layout_width="95dp"
+            android:layout_width="90dp"
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:textSize="13sp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Histórico de reciclagem"/>
+            android:text="Histórico de coletas"/>
 
     </LinearLayout>
 
@@ -301,22 +298,23 @@
 
         <ImageView
             android:id="@+id/image_tip"
-            android:layout_width="130dp"
-            android:layout_height="160dp"
-            android:layout_marginBottom="35dp"
+            android:layout_width="124dp"
+            android:layout_height="140dp"
+            android:layout_marginBottom="42.5dp"
             android:layout_below="@id/line_top"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_tip" />
 
         <TextView
+            android:id="@+id/text_about_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/container_options"
-            android:layout_marginBottom="35dp"
+            android:layout_below="@+id/line_top"
+            android:layout_marginBottom="30dp"
             android:layout_marginHorizontal="10dp"
             android:textColor="@color/black"
             android:fontFamily="@font/nunito"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:textSize="15sp"
             android:layout_toEndOf="@id/image_tip"
             android:text="Quando você recicla seus itens eletrônicos com a gente, além de ajudar o meio ambiente, você é recompensado por meio de dinheiro e descontos que podem ser utilizados em nossas lojas parceiras!"
@@ -327,7 +325,7 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#D3D3D3"
-            android:layout_below="@id/image_tip"/>
+            android:layout_below="@id/text_about_company"/>
 
 
         <TextView
@@ -336,12 +334,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_below="@id/line_bottom"
-            android:fontFamily="@font/nunito"
-            android:layout_marginTop="35dp"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="17sp"
+            android:layout_marginTop="30dp"
             android:text="Use seu desconto de "
             android:layout_marginBottom="35dp"
             android:textColor="@color/black"
-            android:textSize="14sp" />
+            />
 
 
         <TextView
@@ -349,26 +348,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/line_bottom"
-            android:layout_marginTop="35dp"
-            android:textSize="14sp"
+            android:layout_marginTop="30dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/inter_semibold"
             android:textColor="#008000"
             android:textStyle="bold"
-            android:fontFamily="@font/nunito"
             android:layout_toEndOf="@id/text_discount"
             android:text="19.0% "
             />
-        <TextView
-            android:id="@+id/partnership_company"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/line_bottom"
-            android:layout_marginTop="35dp"
-            android:textSize="14sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/nunito"
-            android:layout_toEndOf="@id/discount_value"
-            android:text="em lojas parceiras"
-            />
+
 
         <HorizontalScrollView
             android:id="@+id/scroll_partnership_company"
@@ -427,13 +415,13 @@
             android:id="@+id/text_promotion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="13dp"
             android:layout_marginStart="10dp"
             android:layout_below="@id/scroll_partnership_company"
             android:text="Ofertas das lojas parceiras"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/nunito"
+            android:fontFamily="@font/inter_semibold"
             />
 
 
@@ -442,7 +430,7 @@
             android:layout_below="@id/text_promotion"
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
-            android:layout_marginTop="-20dp"
+            android:layout_marginTop="-15dp"
             android:scrollbars="none"
             android:layout_height="wrap_content">
 
