@@ -1,4 +1,43 @@
 <resources>
     <string name="app_name">SysGreen</string>
     <string name="title_activity_collect_point">CollectPointActivity</string>
+    <string name="password">Senha</string>
+    <string name="email">E-mail</string>
+    <string name="continue_with">Ou continue com</string>
+    <string name="login">Login</string>
+    <string name="register">Ainda não é cadastrado? Cadastre-se!</string>
+    <string name="name_user">Olá, usuário!</string>
+    <string name="welcome">Bem vindo de volta:)</string>
+    <string name="value_money">R$ 100,00</string>
+    <string name="register_new_electronic">Agendar nova coleta</string>
+    <string name="point_collect">Pontos de coleta de próximos</string>
+    <string name="transfer_money">Transferir dinheiro</string>
+    <string name="collect_historic">Histórico de coletas</string>
+    <string name="text_about_company">Quando você recicla seus itens eletrônicos com a gente, além de ajudar o meio ambiente, você é recompensado por meio de dinheiro e descontos que podemser utilizados em nossas lojas parceiras! </string>
+    <string name="text_discount">Use seu desconto de</string>
+    <string name="value_discount"> 19.0%</string>
+    <string name="text_promotion">Ofertas das lojas parceiras</string>
+    <string name="name_electronic">Nome do eletrônico</string>
+    <string name="price_product">Preço estimado do produto descartado</string>
+    <string name="quantify_item">Quantidade de itens descartados</string>
+    <string name="cep">CEP desejado para busca</string>
+    <string name="number_house">Número da casa</string>
+    <string name="best_day_collect_electronic">Melhor dia para coletarmos o eletrônico</string>
+    <string name="best_hours_collect_electronic">Melhor hora para buscar o eletrônico</string>
+    <string name="year_product">Quantos anos tem o produto eletrônico?</string>
+    <string name="option_smaller_three">Menos de 3 anos</string>
+    <string name="option_three_and_five">Entre 3 e 5 anos</string>
+    <string name="option_more_five">Mais de 5 anos</string>
+    <string name="sent_analysis">Enviar para análise</string>
+    <string name="text_reward">Sua recompensa será:</string>
+    <string name="reward_money">R$ </string>
+    <string name="reward_discount"> de desconto</string>
+    <string name="confirm">Confirmar</string>
+    <string name="ask">Sua solicitação foi enviada para análise!</string>
+    <string name="contact_email">Em breve entraremos em contato via e-mail</string>
+    <string name="return_page_principal">Retornar para página principal</string>
+    <string name="alert_hour_collect">Fazemos coletas das 7 horas da manhã até às 18 horas.</string>
+    <string name="alert_form_correction">Preencha os campos corretamente</string>
+
+
 </resources>

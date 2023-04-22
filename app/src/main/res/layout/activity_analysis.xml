@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AnalysisActivity">
 
-
     <TextView
         android:id="@+id/text_analysis"
         android:layout_width="wrap_content"
@@ -16,7 +15,7 @@
         android:textSize = "18sp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/inter_semibold"
-        android:text="Sua solicitação foi enviada para análise!"/>
+        android:text="@string/ask"/>
 
     <ImageView
         android:id="@+id/image_analysis"
@@ -30,14 +29,14 @@
     <TextView
         android:id="@+id/text_contact"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_height="16dp"
         android:layout_below="@id/image_analysis"
-        android:textStyle="italic"
-        android:textColor="@color/black"
         android:layout_centerHorizontal="true"
-        android:textSize = "15sp"
-        android:text="Em breve entraremos em contato via e-mail:)"/>
+        android:layout_marginTop="44dp"
+        android:text="@string/contact_email"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="italic" />
 
 
     <androidx.appcompat.widget.AppCompatButton

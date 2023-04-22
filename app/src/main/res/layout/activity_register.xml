@@ -40,7 +40,7 @@
             android:textSize="16sp"
             android:layout_marginTop="45dp"
             android:layout_alignTop="@+id/form"
-            android:text="Nome do produto eletrônico"/>
+            android:text="@string/name_electronic"/>
 
         <EditText
             android:id="@+id/edittext_name_electronic"
@@ -61,7 +61,7 @@
             android:textSize="16sp"
             android:layout_marginTop="15dp"
             android:layout_below="@+id/edittext_name_electronic"
-            android:text="Preço estimado do produto descatado"/>
+            android:text="@string/price_product"/>
 
          <EditText
             android:id="@+id/edittext_price"
@@ -84,7 +84,7 @@
             android:textSize="16sp"
             android:layout_below="@id/edittext_price"
             android:layout_marginTop="15dp"
-            android:text="Quantidade de itens descartados"/>
+            android:text="@string/quantify_item"/>
 
         <EditText
             android:id="@+id/edittext_quantify_items"
@@ -130,14 +130,13 @@
             android:textSize="16sp"
             android:layout_below="@id/edittext_cep"
             android:layout_marginTop="15dp"
-            android:text="Número da casa"/>
+            android:text="@string/number_house"/>
 
         <EditText
             android:id="@+id/edittext_number_house"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:inputType="number"
-
             android:layout_below="@id/number_house"
             android:layout_marginHorizontal="20dp"
             android:backgroundTint="#008000"
@@ -152,7 +151,7 @@
             android:textSize="16sp"
             android:layout_below="@id/edittext_number_house"
             android:layout_marginTop="15dp"
-            android:text="Melhor dia para buscarmos o eletrônico"/>
+            android:text="@string/best_day_collect_electronic"/>
 
         <EditText
             android:id="@+id/edittext_date_collect"
@@ -175,7 +174,7 @@
             android:textSize="16sp"
             android:layout_below="@id/edittext_date_collect"
             android:layout_marginTop="15dp"
-            android:text="Melhor hora para buscarmos o eletrônico"/>
+            android:text="@string/best_hours_collect_electronic"/>
 
         <EditText
             android:id="@+id/edittext_hours_collect"
@@ -197,7 +196,7 @@
             android:layout_marginTop="17dp"
             android:textColor="@color/black"
             android:layout_marginHorizontal="25dp"
-            android:text="Quantos anos tem o produto eletrônico?"
+            android:text="@string/year_product"
             android:fontFamily="@font/nunito"
             android:layout_below="@id/edittext_hours_collect"
             />
@@ -215,7 +214,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito"
-                android:text="Menos de 3 anos"/>
+                android:text="@string/option_smaller_three"/>
 
             <RadioButton
                 android:id="@+id/option_three_and_five"
@@ -223,7 +222,7 @@
                 android:fontFamily="@font/nunito"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Entre 3 e 5 anos"/>
+                android:text="@string/option_three_and_five"/>
 
             <RadioButton
                 android:id="@+id/option_more_five"
@@ -232,7 +231,7 @@
 
                 android:fontFamily="@font/nunito"
                 android:layout_height="wrap_content"
-                android:text="Mais de 5 anos"/>
+                android:text="@string/option_more_five"/>
 
         </RadioGroup>
 
@@ -243,7 +242,7 @@
             android:layout_width="190dp"
             android:layout_marginTop="30dp"
             android:layout_height="40dp"
-            android:text="Enviar para análise"
+            android:text="@string/sent_analysis"
             android:backgroundTint="#008000"
             android:fontFamily="@font/nunito"
             android:textColor="@color/white"

@@ -71,12 +71,12 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener{
                 intent.putExtra("moreFive", moreFive.isChecked)
                 startActivity(intent)
             }else{
-                Toast.makeText(this, "Fazemos coletas das 7 horas da manhã até às 18 horas.", Toast.LENGTH_LONG).
+                Toast.makeText(this, R.string.alert_hour_collect, Toast.LENGTH_LONG).
                 show()
             }
 
         }else{
-            Toast.makeText(this, "Preencha os campos corretamente", Toast.LENGTH_SHORT).
+            Toast.makeText(this, R.string.alert_form_correction, Toast.LENGTH_SHORT).
             show()
         }
 
