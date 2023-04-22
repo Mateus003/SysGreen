@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(Intent(this, NavigationActivity::class.java))
             finish()
         }else{
-            Toast.makeText(this, "Preencha os campos corretamente", Toast.LENGTH_SHORT).
+            Toast.makeText(this, R.string.alert_form_correction, Toast.LENGTH_SHORT).
             show()
         }
     }
