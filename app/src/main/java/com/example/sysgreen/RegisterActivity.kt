@@ -12,7 +12,6 @@ import com.example.sysgreen.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var binding: ActivityRegisterBinding
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)

@@ -13,8 +13,9 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="230dp"
-        android:layout_height="230dp"
+        android:id="@+id/image_company"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:src="@mipmap/ic_launcher_foreground"
         android:layout_centerHorizontal="true"
         />
@@ -22,10 +23,11 @@
     <EditText
         android:id="@+id/text_email"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="18dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="230dp"
+        android:layout_below="@id/image_company"
+        android:layout_marginTop="20dp"
+        android:drawableEnd="@drawable/ic_email"
         android:layout_marginRight="18dp"
         android:background="@drawable/background_edittext"
         android:hint= "@string/email"
@@ -35,12 +37,12 @@
     <EditText
         android:id="@+id/text_password"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/text_email"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="12dp"
+        android:drawableEnd="@drawable/ic_eye"
         android:layout_marginRight="18dp"
-        android:gravity="center_vertical|center_horizontal"
         android:background="@drawable/background_edittext"
         android:hint="@string/password"
         android:inputType="textPassword"

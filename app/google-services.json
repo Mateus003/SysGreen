@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "846438082343",
+    "project_id": "projeto-sysgreen",
+    "storage_bucket": "projeto-sysgreen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846438082343:android:a7607c3f7b7eb12e01eb02",
+        "android_client_info": {
+          "package_name": "com.example.sysgreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846438082343-2oiscj11utpp51hrtejtbudmc8o1mpd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEAmkBn9Hxd0MeqKW9DKipVZIir_OG7IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846438082343-2oiscj11utpp51hrtejtbudmc8o1mpd0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
