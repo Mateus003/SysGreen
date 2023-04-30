@@ -1,5 +1,6 @@
 package com.example.sysgreen
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Color
@@ -9,12 +10,18 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
+import android.util.Log
 import android.view.View
 import com.example.sysgreen.databinding.ActivityNavigationBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.EventListener
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 class NavigationActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityNavigationBinding
-
+    val dataBase = FirebaseFirestore.getInstance()
+    private lateinit  var userId: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityNavigationBinding.inflate(layoutInflater)
@@ -33,6 +40,59 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
 
         text.paint.shader = shader
 
+        buttonSetOnClickListener()
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+
+
+
+
+    }
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.container_register -> {
+                startActivity(Intent(this, RegisterActivity::class.java))
+            }
+            R.id.container_collect_point -> {
+                startActivity(Intent(this, CollectPointActivity::class.java))
+            }
+            R.id.kabum -> {
+                val url = "https://www.kabum.com.br"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            }
+            R.id.ibyte, R.id.ibyte_promotion -> {
+                val url = "https://www.ibyte.com.br"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            }
+            R.id.magalu, R.id.magalu_promotion -> {
+                val url = "https://www.magazineluiza.com.br"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            }
+            R.id.pichau -> {
+                val url = "https://www.pichau.com.br"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            }
+            R.id.terabyte, R.id.terabyte_promotion -> {
+                val url = "https://www.terabyteshop.com.br"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun buttonSetOnClickListener(){
         binding.containerCollectPoint.setOnClickListener(this)
         binding.containerRegister.setOnClickListener(this)
 
@@ -45,43 +105,5 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
         binding.terabytePromotion.setOnClickListener(this)
         binding.ibytePromotion.setOnClickListener(this)
         binding.magaluPromotion.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View) {
-        if (v.id == R.id.container_register){
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }else if(v.id == R.id.container_collect_point){
-            startActivity(Intent(this, CollectPointActivity::class.java))
-        }
-
-        else if(v.id == R.id.kabum){
-            val url = "https://www.kabum.com.br"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        }else if(v.id == R.id.ibyte || v.id == R.id.ibyte_promotion){
-            val url = "https://www.ibyte.com.br"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        }
-
-        else if(v.id == R.id.magalu || v.id == R.id.magalu_promotion){
-            val url = "https://www.magazineluiza.com.br"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        }
-        else if(v.id == R.id.pichau){
-            val url = "https://www.pichau.com.br"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        }else if(v.id == R.id.terabyte || v.id == R.id.terabyte_promotion){
-            val url = "https://www.terabyteshop.com.br"
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(url)
-            startActivity(intent)
-        }
     }
 }

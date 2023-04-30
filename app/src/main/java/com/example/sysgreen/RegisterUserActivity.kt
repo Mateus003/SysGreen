@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.Objects
 
 class RegisterUserActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding:ActivityRegisterUserBinding
@@ -96,23 +97,25 @@ class RegisterUserActivity : AppCompatActivity(), View.OnClickListener {
 
             })
     }
-    private fun saveDateUser(){
-        val lastName = binding.edittextLastName.text.toString()
-        val firstName = binding.edittextFirstName.text.toString()
 
+    private fun saveDateUser(){
+        val name = binding.edittextFirstName.text.toString() +" "+ binding.edittextLastName.text.toString()
+
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
         val dataBase = FirebaseFirestore.getInstance()
         val user = hashMapOf(
-            "firstName" to firstName,
-            "lastName" to lastName
+            "name" to name
         )
-        dataBase.collection("users")
-            .add(user)
-            .addOnSuccessListener { documentReference ->
-                Log.d(TAG, "DocumentSnapshot adicionado com ID: ${documentReference.id}")
+        dataBase.collection("Usuarios")
+            .document(userId)
+            .set(user)
+            .addOnSuccessListener {
+                Log.d(TAG, "Dados do usuário salvos com sucesso!")
             }
             .addOnFailureListener { e ->
-                Log.w(TAG, "Error ao adicionar documento", e)
+                Log.w(TAG, "Erro ao salvar os dados do usuário", e)
             }
-
     }
+
+
 }

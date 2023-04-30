@@ -99,7 +99,6 @@
             android:layout_below="@id/text_password"
             android:layout_height="wrap_content"/>
 
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_register_user"
             android:layout_width="match_parent"

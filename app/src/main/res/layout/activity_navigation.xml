@@ -37,7 +37,6 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="@string/name_user"
             android:layout_toEndOf="@id/background_picture"
             />
 

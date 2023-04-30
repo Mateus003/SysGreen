@@ -26,15 +26,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.register.setOnClickListener(this)
         binding.containerIcons.setOnClickListener(this)
 
-    }
+        binding.textSupport.setOnClickListener(this)
 
-    override fun onClick(v: View) {
-        if (v.id == R.id.button_login) {
-            verifyLogin()
-        } else if (v.id == R.id.register) {
-            startActivity(Intent(this, RegisterUserActivity::class.java))
 
-        }
     }
 
     override fun onStart() {
@@ -44,6 +38,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(Intent(this, NavigationActivity::class.java))
         }
     }
+
+    override fun onClick(v: View) {
+        if (v.id == R.id.button_login) {
+            verifyLogin()
+        } else if (v.id == R.id.register) {
+            startActivity(Intent(this, RegisterUserActivity::class.java))
+        } else if (v.id == R.id.text_support){
+            startActivity(Intent(this, ResetPasswordActivity::class.java))
+        }
+    }
+
 
     private fun verifyLogin() {
         val email = binding.textEmail.text.toString()
@@ -61,7 +66,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
-                if (!(task.isSuccessful)) {
+                if ((task.isSuccessful)) {
+                    startActivity(Intent(this, NavigationActivity::class.java))
+                }else{
                     val error: String = when (task.exception) {
                         is FirebaseAuthInvalidUserException -> "Usuário não existe"
                         is FirebaseAuthInvalidCredentialsException -> {
@@ -78,5 +85,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
     }
+
 
 }
