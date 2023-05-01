@@ -45,11 +45,18 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onStart() {
         super.onStart()
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+        val dataBase = FirebaseFirestore.getInstance()
 
-
-
-
-
+        dataBase.collection("Usuarios").document(userId)
+            .get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    val name = document.getString("name")
+                    // exibe o nome na tela
+                    binding.textNameUser.text = "Olá, $name"
+                }
+            }
     }
     override fun onClick(v: View) {
         when (v.id) {
@@ -58,6 +65,12 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.container_collect_point -> {
                 startActivity(Intent(this, CollectPointActivity::class.java))
+            }
+
+            R.id.image_logout->{
+                FirebaseAuth.getInstance().signOut()
+                startActivity(Intent(this, MainActivity::class.java))
+
             }
             R.id.kabum -> {
                 val url = "https://www.kabum.com.br"
@@ -93,6 +106,7 @@ class NavigationActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun buttonSetOnClickListener(){
+        binding.imageLogout.setOnClickListener(this)
         binding.containerCollectPoint.setOnClickListener(this)
         binding.containerRegister.setOnClickListener(this)
 

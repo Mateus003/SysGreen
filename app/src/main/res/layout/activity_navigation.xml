@@ -33,10 +33,11 @@
             android:id="@+id/text_name_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text=""
             android:fontFamily="@font/nunito"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:layout_toEndOf="@id/background_picture"
             />
 
@@ -62,23 +63,17 @@
             android:layout_marginBottom="10dp"
             android:src="@drawable/ic_person" />
 
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_support"
-            android:layout_marginTop="10dp"
-            android:layout_toStartOf="@id/image_notification"
-            />
+
 
         <ImageView
-            android:id="@+id/image_notification"
+            android:id="@+id/image_logout"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_notification" />
+            android:src="@drawable/ic_logout" />
 
         <TextView
             android:id="@+id/balance"
@@ -350,7 +345,7 @@
             android:textColor="#008000"
             android:textStyle="bold"
             android:layout_toEndOf="@id/text_discount"
-            android:text="@string/value_discount"
+            android:text=" 19.0%"
             />
 
 

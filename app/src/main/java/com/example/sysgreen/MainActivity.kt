@@ -3,6 +3,8 @@ package com.example.sysgreen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.InputType
 import android.view.MotionEvent
 import android.view.View
@@ -41,7 +43,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         if (v.id == R.id.button_login) {
-            verifyLogin()
+            Handler(Looper.getMainLooper()).postDelayed({
+                verifyLogin()
+            }, 1500)
         } else if (v.id == R.id.register) {
             startActivity(Intent(this, RegisterUserActivity::class.java))
         } else if (v.id == R.id.text_support){
